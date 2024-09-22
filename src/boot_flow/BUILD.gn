@@ -10,14 +10,6 @@ source_set("common") {
   sources = [ "common.c" ]
 }
 
-source_set("linux") {
-  sources = [ "linux.c" ]
-  deps = [
-    ":common",
-    "//src/arch/${plat_arch}/boot_flow:linux",
-  ]
-}
-
 source_set("spmc") {
   sources = [ "spmc.c" ]
   deps = [
